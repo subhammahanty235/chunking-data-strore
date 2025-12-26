@@ -20,21 +20,25 @@ This project focuses on **chunking**, **distributed storage**, and **metadata-dr
 
 ## 📁 Project Structure
 
-├── storage_nodes/ # Simulated storage disks
-│ ├── disk1/
-│ ├── disk2/
-│ └── disk3/
+```
+├── storage_nodes/              # Simulated storage disks
+│   ├── disk1/
+│   ├── disk2/
+│   └── disk3/
+│       ├── buckets/            # Buckets (namespaces)
+│       └── my-bucket/
+│           └── {filename}.meta.json
 │
-├── buckets/ # Buckets (namespaces)
-│ └── my-bucket/
-│ └── {filename}.meta.json
+├── downloaded_files/           # Reconstructed downloaded files
 │
-├── downloaded_files/ # Reconstructed downloaded files
+├── scripts/
+│   ├── upload/
+│   │   └── main.go             # Upload CLI
+│   └── download/
+│       └── main.go             # Download CLI
 │
-├── scripts/upload/main.go # Upload CLI
-├── scripts/download/main.go # Download CLI
 └── README.md
-
+```Claude is AI and can make mistakes. Please double-check responses.
 
 ---
 
